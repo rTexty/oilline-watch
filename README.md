@@ -1,6 +1,6 @@
 # OilLine Watch
 
-[![OilLine Watch logo beside a steel pipeline with three pressure sensors](docs/images/oilline-watch-banner.jpg)](https://rtexty.github.io/oilline-watch/?forecast=demo)
+[![OilLine Watch wordmark beside a transparent pipeline with a highlighted inspection point](docs/images/oilline-watch-banner.jpg)](https://rtexty.github.io/oilline-watch/?forecast=demo)
 
 **Wall-thickness forecasting and a 3D pressure lab for oil pipelines.**
 
