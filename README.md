@@ -70,6 +70,8 @@ Historical checks use inputs dated before the inspection being predicted and rep
 
 ## Verification
 
+GitHub Actions runs the frontend checks, a Chromium smoke suite, and the Python forecast checks on pull requests to `main` and on pushes to `main`. Pages deploys after both checks pass on `main`. The Python job regenerates the hosted synthetic CSV and compares it byte for byte with the checked-in example. [Workflow runs](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml).
+
 ```sh
 npm run verify
 npx playwright install chromium

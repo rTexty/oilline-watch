@@ -1,7 +1,9 @@
-name: Deploy browser demo
+name: CI and GitHub Pages
 
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -9,11 +11,12 @@ permissions:
   contents: read
 
 concurrency:
-  group: github-pages
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  build:
+  frontend:
+    name: Frontend and browser checks
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -21,8 +24,6 @@ jobs:
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Set up Node.js
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
@@ -32,18 +33,55 @@ jobs:
         run: npm ci
       - name: Verify and build the demo
         run: npm run verify
+      - name: Install Chromium and system dependencies
+        run: npx playwright install --with-deps chromium
+      - name: Test the published demo routes and replay
+        run: >-
+          npx playwright test --workers=1
+          tests/e2e/degradation-hosted-demo.spec.ts
+          tests/e2e/pipe-guided-demo.spec.ts
+          tests/e2e/export-replay.spec.ts
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Include the synthetic wall-thickness example
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: cp examples/synthetic/wall-thickness-demo.csv dist/wall-thickness-demo.csv
       - name: Upload the static site
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: dist
 
-  deploy:
-    if: github.ref == 'refs/heads/main'
+  forecast:
+    name: Python forecast checks
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    needs: build
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: submission/requirements.txt
+      - name: Install forecast and test dependencies
+        run: python -m pip install -r submission/requirements.txt pytest==9.0.3
+      - name: Run forecast tests
+        run: python -m pytest -q submission/tests
+      - name: Verify the hosted CSV matches the synthetic generator
+        run: |
+          python -m examples.synthetic.generate "$RUNNER_TEMP/oilline-watch-synthetic"
+          diff -u examples/synthetic/wall-thickness-demo.csv "$RUNNER_TEMP/oilline-watch-synthetic/forecast/result.csv"
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [frontend, forecast]
     permissions:
       pages: write
       id-token: write
