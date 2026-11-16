@@ -2,9 +2,14 @@
 
 **Wall-thickness forecasting and a 3D pressure lab for oil pipelines.**
 
-**[Open the live 3D demo ↗](https://rtexty.github.io/oilline-watch/?forecast=demo)** · **[Explore a thickness profile ↗](https://rtexty.github.io/oilline-watch/degradation.html?forecast=demo)**
+[![Open the live 3D leak lab](https://img.shields.io/badge/Open_3D_Leak_Lab-275C60?style=for-the-badge&logo=threedotjs&logoColor=white)](https://rtexty.github.io/oilline-watch/?forecast=demo)
+[![Explore the wall-thickness profile](https://img.shields.io/badge/Explore_Thickness_Profile-35546F?style=for-the-badge&logo=githubpages&logoColor=white)](https://rtexty.github.io/oilline-watch/degradation.html?forecast=demo)
 
-[![GitHub Pages deployment](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml/badge.svg)](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml)
+[![GitHub Pages deployment](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml)
+![TypeScript](https://img.shields.io/badge/TypeScript-344B63?logo=typescript&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-344B63?logo=threedotjs&logoColor=white)
+![Python](https://img.shields.io/badge/Python-344B63?logo=python&logoColor=white)
+[![Synthetic demo data](https://img.shields.io/badge/Data-Synthetic-6A583F?labelColor=394550)](examples/synthetic/)
 
 Pipeline integrity teams need to decide where to verify wall loss between inspections. OilLine Watch estimates the minimum remaining wall thickness in each 10 m segment and ranks the thinnest segments for follow-up.
 
