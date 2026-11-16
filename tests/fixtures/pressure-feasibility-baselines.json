@@ -1,0 +1,822 @@
+{
+  "origin": "Independent Godunov and analytic source baselines, with selected native and phase probes",
+  "sourceArchiveSha256": "65b03798f178665ace0bbe8c5cb89a33f6b58de1d468a8169d78e71578dd7ba6",
+  "sourceFree": [
+    {
+      "case": "nominal-before",
+      "arrivalsUs": {
+        "directP1": 499999.0,
+        "qin": 599999.0,
+        "reflectedP1": 699999.0
+      },
+      "samples": [
+        {
+          "timeUs": 400000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 450000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 499998,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 499999,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 550000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 599998,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 599999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 600001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 650000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 699998,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 699999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 700001,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        }
+      ]
+    },
+    {
+      "case": "nominal-tie",
+      "arrivalsUs": {
+        "directP1": 500000.0,
+        "qin": 600000.0,
+        "reflectedP1": 700000.0
+      },
+      "samples": [
+        {
+          "timeUs": 400000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 450000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 499999,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 550000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 599999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 650000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 699999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 700001,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700002,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        }
+      ]
+    },
+    {
+      "case": "nominal-after",
+      "arrivalsUs": {
+        "directP1": 500001.0,
+        "qin": 600001.0,
+        "reflectedP1": 700001.0
+      },
+      "samples": [
+        {
+          "timeUs": 400000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 450000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500001,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500003,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 550000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600003,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 650000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 700000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 700001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700002,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700003,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        }
+      ]
+    },
+    {
+      "case": "anchor-7",
+      "arrivalsUs": {
+        "directP1": 500994.97484264796,
+        "qin": 600493.7185533099,
+        "reflectedP1": 699992.4622639719
+      },
+      "samples": [
+        {
+          "timeUs": 400000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 450000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500993,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500994,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500995,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500996,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 550000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600492,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600493,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600494,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600495,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 650000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02564214611658861,
+          "analyticQinM3s": 0.025642146116588597
+        },
+        {
+          "timeUs": 699991,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 699992,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 699993,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 699994,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02564214611658861,
+          "analyticQinM3s": 0.025642146116588597
+        }
+      ]
+    },
+    {
+      "case": "physical-503m",
+      "arrivalsUs": {
+        "directP1": 500000.0,
+        "qin": 600000.0,
+        "reflectedP1": 700000.0
+      },
+      "samples": [
+        {
+          "timeUs": 400000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 450000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 499999,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 500002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 550000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 599999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 600002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 650000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 699999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 700001,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 700002,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        }
+      ]
+    },
+    {
+      "case": "snapped-505m",
+      "arrivalsUs": {
+        "directP1": 502000.0,
+        "qin": 602000.0,
+        "reflectedP1": 702000.0
+      },
+      "samples": [
+        {
+          "timeUs": 400000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 450000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 500000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 501999,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 502000,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 502001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 502002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 550000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 600000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.02513274122871835,
+          "analyticQinM3s": 0.02513274122871835
+        },
+        {
+          "timeUs": 601999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 602000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 602001,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 602002,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 650000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 700000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": 0.025639592692549965,
+          "analyticQinM3s": 0.025639592692549954
+        },
+        {
+          "timeUs": 701999,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 702000,
+          "p1Pa": 1193143.227150016,
+          "analyticP1Pa": 1193143.2271500162,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 702001,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        },
+        {
+          "timeUs": 702002,
+          "p1Pa": 1200000.0,
+          "analyticP1Pa": 1200000.0,
+          "qinM3s": null,
+          "analyticQinM3s": null
+        }
+      ]
+    }
+  ],
+  "manufacturedSource": [
+    {
+      "elapsedSeconds": 0.05,
+      "matrix": [
+        [
+          49529.364902658104,
+          -5.0
+        ],
+        [
+          -5.0,
+          19292.367742778122
+        ]
+      ],
+      "rhs": [
+        15847796.768850593,
+        5979084.000261218
+      ],
+      "oilK": 319.9989907594633,
+      "wallK": 310.00259143690727,
+      "pressureCorrectionPa": -556.8417278653415
+    },
+    {
+      "elapsedSeconds": 0.1,
+      "matrix": [
+        [
+          49534.364902658104,
+          -10.0
+        ],
+        [
+          -10.0,
+          19297.467742778124
+        ]
+      ],
+      "rhs": [
+        15847796.768850593,
+        5979115.000261218
+      ],
+      "oilK": 319.9979822454495,
+      "wallK": 310.0051809814524,
+      "pressureCorrectionPa": -1113.2826015719802
+    }
+  ]
+}

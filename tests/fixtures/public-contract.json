@@ -1,0 +1,8 @@
+{
+  "sensorId": "P1",
+  "sampleSeq": 0,
+  "sampleTimeUs": 10000,
+  "deliveredTimeUs": 10000,
+  "valueSI": 1200000,
+  "quality": "valid"
+}

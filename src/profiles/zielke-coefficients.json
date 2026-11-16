@@ -1,0 +1,8 @@
+{
+  "kernelVersion": "zielke-hybrid-v1",
+  "source": "Adamkowski and Lewandowski (2003), equations 7–8",
+  "sourceUrl": "https://www.cmff.hu/cmff18/proceedings/former/CMFF03/pdfs/0624.pdf",
+  "cutoffTheta": 0.02,
+  "recentCoefficients": [0.282095, -1.25, 1.057855, 0.9375, 0.396696, -0.351563],
+  "tailRates": [26.3744, 70.8493, 135.0198, 218.9216, 322.5544]
+}

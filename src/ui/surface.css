@@ -1,0 +1,31 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --canvas: #eef1f5;
+  --panel: #fff;
+  --surface: #f5f7fa;
+  --line: #d8e0e7;
+  --ink: #202c36;
+  --muted: #526472;
+  --quiet: #5e7080;
+  --accent: #355c78;
+  --glass: rgba(252, 253, 254, .84);
+  --mono: ui-monospace, "SF Mono", Consolas, monospace;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+body { margin: 0; }
+.workspace-glass { background: #f9fbfd; }
+@supports ((backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))) {
+  .workspace-glass {
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .workspace-glass { background: #f9fbfd; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

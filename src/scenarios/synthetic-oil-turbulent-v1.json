@@ -1,0 +1,70 @@
+{
+  "profileId": "synthetic-oil-turbulent-v1",
+  "mode": "turbulent",
+  "schemaVersion": 1,
+  "unitsVersion": 1,
+  "modelVersion": "1",
+  "geometry": {
+    "lengthM": 1000,
+    "diameterM": 0.2,
+    "wallThicknessM": 0.008,
+    "roughnessM": 0.000045,
+    "youngModulusPa": 210000000000,
+    "supportFactor": 1
+  },
+  "publicFluidProfile": {
+    "rho0KgM3": 850,
+    "pRefPa": 1200000,
+    "tRefK": 313.15,
+    "bulkModulusPa": 945695364.2384107,
+    "cpJkgK": 2000,
+    "expansionPerK": 0.0007,
+    "conductivityWMK": 0.13,
+    "viscosity": {
+      "kind": "walther",
+      "points": [
+        {
+          "temperatureK": 313.15,
+          "kinematicM2S": 0.00001
+        },
+        {
+          "temperatureK": 333.15,
+          "kinematicM2S": 0.000005
+        }
+      ]
+    },
+    "phaseQualification": "stipulated-synthetic"
+  },
+  "initialPublicControls": {
+    "inletPressurePa": 1200000,
+    "outletFlowM3s": 0.02513274122871835,
+    "inletTemperatureK": 313.15,
+    "ambientTemperatureK": 313.15
+  },
+  "startupQualification": "known-healthy",
+  "limits": {
+    "pressureMinPa": 250000,
+    "pressureMaxPa": 2000000,
+    "temperatureMinK": 308.15,
+    "temperatureMaxK": 338.15,
+    "externalPressurePa": 101325,
+    "phaseMinPa": 50000
+  },
+  "thermal": {
+    "initialOilTemperatureK": 313.15,
+    "initialWallTemperatureK": 313.15,
+    "wallDensityKgM3": 7850,
+    "wallCpJkgK": 470,
+    "wallConductivityWMK": 45,
+    "innerConductanceWMK": 100,
+    "outerConductanceWMK": 2,
+    "stepUs": 100000
+  },
+  "grid": {
+    "segments": 200,
+    "nominalStepUs": 5000
+  },
+  "warmupUs": 30000000,
+  "horizonUs": 330000000,
+  "sensorProfileId": "synthetic-oil-nominal-v1"
+}
