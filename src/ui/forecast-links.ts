@@ -1,14 +1,12 @@
-const CANDIDATE_QUERY = 'forecast=candidate'
-
 export function defenseHomeLink(pathname: string): string | undefined {
   return /\/demo\/dist\/(?:index\.html|degradation\.html)?$/.test(pathname) ? '../../index.html' : undefined
 }
 
-export function opensCandidate(search: string): boolean {
-  return new URLSearchParams(search).get('forecast') === 'candidate'
+export function forecastMode(search: string): string | null {
+  return new URLSearchParams(search).get('forecast')
 }
 
 export function forecastLink(page: 'index.html' | 'degradation.html'): string {
-  const candidate = typeof window !== 'undefined' && opensCandidate(window.location.search)
-  return candidate ? `./${page}?${CANDIDATE_QUERY}` : `./${page}`
+  const mode = typeof window !== 'undefined' ? forecastMode(window.location.search) : null
+  return mode === 'candidate' || mode === 'demo' ? `./${page}?forecast=${mode}` : `./${page}`
 }

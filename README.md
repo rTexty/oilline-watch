@@ -1,41 +1,40 @@
 # OilLine Watch
 
-**Turn inspection history into a map of where to inspect next.**
+**Wall-thickness forecasting and a 3D pressure lab for oil pipelines.**
 
-Pipeline integrity teams need to decide where to verify wall loss between costly inspections. OilLine Watch estimates the minimum remaining wall thickness in each 10 m segment and ranks the thinnest segments for follow-up. Engineers can inspect the profile in a browser and export the shortlist for planning.
+**[Open the live 3D demo ↗](https://rtexty.github.io/oilline-watch/?forecast=demo)** · **[Explore a thickness profile ↗](https://rtexty.github.io/oilline-watch/degradation.html?forecast=demo)**
 
-> **Stage** · Engineering prototype for evaluation on synthetic data. Field accuracy and thresholds for operational decisions have yet to be established.
+[![GitHub Pages deployment](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml/badge.svg)](https://github.com/rTexty/oilline-watch/actions/workflows/pages.yml)
 
-![Wall-thickness profile and inspection shortlist for a synthetic pipeline](docs/images/inspection-profile.png)
+Pipeline integrity teams need to decide where to verify wall loss between inspections. OilLine Watch estimates the minimum remaining wall thickness in each 10 m segment and ranks the thinnest segments for follow-up.
 
-## Two workflows
+[![The OilLine Watch 3D pressure lab with three virtual sensors](docs/images/workbench.png)](https://rtexty.github.io/oilline-watch/?forecast=demo)
 
-| Workflow | What the user can do |
-| --- | --- |
-| **Inspection planning** | Generate a wall-thickness profile from local CSVs. Select a segment, inspect nearby estimates, and review the lowest 10% by predicted thickness. |
-| **Pressure-response lab** | Pick a point on a 3D synthetic pipe, introduce a simulated leak, and compare three virtual pressure sensors with a nominal run. Reveal the chosen point and export a replay. |
+## Try it in your browser
 
-The two workflows run independently. The pressure lab illustrates transient response. The segment forecast estimates wall loss over an inspection horizon. [See the evaluation method](docs/methodology.md).
+**3D pressure lab.** Pick a point on the pipe and select **Начать показ** to start the simulation at 4×. After warm-up, apply the leak and compare the virtual sensor readings with the nominal pressure trajectory. Finish and reveal the event to see the selected coordinate. On devices without WebGL, the lab uses a 2D view.
 
-## Try the browser demo
+**Inspection planning.** Open the profile with two fictional routes. Select a segment on the chart or choose a row from the 10% with the lowest predicted thickness. Use **Загрузить CSV** to open another forecast. The browser reads the file locally.
 
-Use the Node version in [`.nvmrc`](.nvmrc). Install dependencies once and start the local UI.
+<details>
+<summary>Preview the thickness profile</summary>
+
+[![Wall-thickness profile and inspection shortlist for a synthetic pipeline](docs/images/inspection-profile.png)](https://rtexty.github.io/oilline-watch/degradation.html?forecast=demo)
+
+</details>
+
+Both demos use synthetic data and require no installation. The pressure lab illustrates transient response. The segment forecast estimates wall loss over an inspection horizon. Field accuracy and thresholds for operational decisions have yet to be established. [See the evaluation method](docs/methodology.md).
+
+## Run locally
+
+Use the Node version in [`.nvmrc`](.nvmrc) to start the browser UI.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite. On the home page, select a point on the pipe by clicking, tapping, or using the slider. Choose **Начать показ** to run the lab at 4×. Once the warm-up finishes, open the leak controls and apply the event. The graph shows the signed pressure residuals from the simulation. The result screen reveals the chosen coordinate. A 2D view is available when WebGL is unavailable.
-
-Open `/degradation.html` to view thickness profiles. Choose **Загрузить CSV** and open the forecast generated below. The browser reads the file locally.
-
-<details>
-<summary>Preview the 3D pressure lab</summary>
-
-![A synthetic pipe in the Three.js pressure lab with three virtual pressure sensors](docs/images/workbench.png)
-
-</details>
+Open the local URL printed by Vite for the pressure lab. Open `/degradation.html` and use **Загрузить CSV** to view the forecast generated below.
 
 ## Run a thickness forecast
 

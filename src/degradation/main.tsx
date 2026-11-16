@@ -4,7 +4,7 @@ import { readCandidateSelection, saveCandidateSelection } from './candidate-sele
 import { readInspectionCsv } from './load-scenarios'
 import type { ForecastRow, ForecastTrace, InspectionCsv, ScenarioTrace } from './load-scenarios'
 import { runCpu, runGpu } from './scenario'
-import { defenseHomeLink, forecastLink, opensCandidate } from '../ui/forecast-links'
+import { defenseHomeLink, forecastLink, forecastMode } from '../ui/forecast-links'
 import '../ui/surface.css'
 import './style.css'
 
@@ -17,6 +17,7 @@ const format = (value: number) => formatter.format(value)
 const formatShift = (shift: number) => `${shift > 0 ? '+' : ''}${shift} м`
 
 const bundles = {
+  demo: { name: 'wall-thickness-demo.csv', kind: 'forecast', label: 'Синтетический прогноз' },
   candidate: { name: 'result.csv', kind: 'forecast', label: 'Кандидатный прогноз' },
   alignment: { name: 'candidate_repeat_scenarios.csv', kind: 'scenarios', label: 'Сценарии привязки' },
   reportGap: { name: 'result.csv', kind: 'forecast', label: 'Экспериментальный прогноз' },
@@ -24,8 +25,9 @@ const bundles = {
 type Bundle = (typeof bundles)[keyof typeof bundles]
 
 function requestedBundle(): Bundle | null {
-  if (opensCandidate(window.location.search)) return bundles.candidate
-  const mode = new URLSearchParams(window.location.search).get('forecast')
+  const mode = forecastMode(window.location.search)
+  if (mode === 'demo') return bundles.demo
+  if (mode === 'candidate') return bundles.candidate
   if (mode === 'alignment') return bundles.alignment
   if (mode === 'report-gap') return bundles.reportGap
   return null
@@ -33,7 +35,8 @@ function requestedBundle(): Bundle | null {
 
 async function readBundleCsv(bundle: Bundle, signal: AbortSignal): Promise<string> {
   const folder = bundle === bundles.reportGap ? 'report-gap/' : ''
-  const response = await fetch(`../../forecast/${folder}${bundle.name}`, { mode: 'same-origin', redirect: 'error', signal })
+  const path = bundle === bundles.demo ? `./${bundle.name}` : `../../forecast/${folder}${bundle.name}`
+  const response = await fetch(path, { mode: 'same-origin', redirect: 'error', signal })
   if (!response.ok || !response.body) {
     await response.body?.cancel()
     throw new Error('Файл прогноза недоступен.')
